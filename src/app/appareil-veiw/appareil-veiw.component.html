@@ -11,13 +11,15 @@
                          [id]="appareil.id"></app-appareil>
         </ul>
         <button class="btn btn-success"
-                [disabled]="!isAuth"
+                
                 (click)="turnAllOn()">Tout allumer
               </button>
               <button class="btn btn-danger"
-              [disabled]="!isAuth"
+              
               (click)="turnAllOff()">Tout éteindre
             </button>
+           <button class="btn btn-success" (click)="onSave()">Enregistrer en base</button>
+           <button class="btn btn-success" (click)="onFetch()">Chargement</button>
       </div>
     </div>
   </div>

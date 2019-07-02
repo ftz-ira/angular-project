@@ -9,8 +9,6 @@ import { Subscription } from 'rxjs';
 })
 export class AppareilVeiwComponent implements OnInit, OnDestroy {
 
-
-
   appareils: any[];
   appareilSubscription: Subscription;
 
@@ -48,5 +46,11 @@ export class AppareilVeiwComponent implements OnInit, OnDestroy {
   }
   ngOnDestroy(): void {
     this.appareilSubscription.unsubscribe();
+  }
+  onSave(){
+    this.appareilService.saveAppareilToServer();
+  }
+  onFetch(){
+    this.appareilService.getAppareilFromServer();
   }
 }
